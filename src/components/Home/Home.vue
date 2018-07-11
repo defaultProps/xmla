@@ -8,6 +8,9 @@
     </div>
     <div class="icon-wrapper"><i class="icon-naozhong iconfont"></i></div>
     <div class="icon-wrapper"><i class="icon-xiazai iconfont"></i></div>
+
+
+    
   </div>
   <router-link to="/Home/classify">分类</router-link>
   <router-link to="/Home/recommend">推荐</router-link>
