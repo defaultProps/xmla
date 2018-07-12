@@ -16,11 +16,14 @@ import Radio from '@/components/radio/radio'
 
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
 
 Vue.use(VueRouter);
+Vue.use(VueAwesomeSwiper);
 Vue.use(ElementUI);
-
-Vue.config.productionTip = false
+Vue.use(VueAxios,axios);
 
 /* eslint-disable no-new */
 

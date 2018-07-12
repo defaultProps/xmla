@@ -1,10 +1,20 @@
-table($padding, $height, $backgroundColor)
+flex($padding, $height, $backgroundColor)
   display flex
-  padding $padding
+  padding 0 $padding
   background-color $backgroundColor
   width 100%
   height $height
   box-sizing border-box
-  justify-content space-between
+  justify-content space-around
   align-items center
-  
+flex-lists($lineHeight,$background,$margin)
+  display flex
+  justify-content space-around
+  align-items center 
+  background-color $background
+  position relative
+  line-height $lineHeight
+  margin $margin 0
+swiper($width, $height)
+  width $width
+  height $height

@@ -1,11 +1,12 @@
 <template>
-  <div>
-    <div class="header">
-      <div class="login">登录</div>
-      <div class="input"></div>
-      <div class="icon-wrapper"><i class="iconfont"></i></div>
-      <div class="icon-wrapper"><i class="iconfont"></i></div>
+  <div class="header">
+    <div class="login">登录</div>
+    <div class="input-wrap">
+      <i class="icon-chazhao iconfont"></i>
+      <input type="text" placeholder="权谋:升迁有道 | 扶摇皇后 | 穿越" />
     </div>
+    <div class="icon-wrapper"><i class="icon-naozhong iconfont"></i></div>
+    <div class="icon-wrapper"><i class="icon-xiazai iconfont"></i></div>
   </div>
 </template>
 
@@ -17,9 +18,4 @@ export default {
 
 <style lang="stylus">
 @import '../../common/stylus/mixin.styl'
-.header
-  table(10px, 48px, #ffffff)
-  .login
-    font-weight 500
-    padding-right 10px
 </style>
