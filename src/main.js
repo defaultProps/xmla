@@ -14,6 +14,7 @@ import member from '@/components/member/member'
 import directSeeding from '@/components/directSeeding/directSeeding'
 import Radio from '@/components/radio/radio'
 
+
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
