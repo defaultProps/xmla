@@ -33,23 +33,7 @@ const routes = [{
   component: Home
 },{
   path: '/Home',
-  component: Home,
-  children: [{
-    path: '/Home/classify',
-    component: classify
-    },{
-      path: '/Home/recommend',
-      component: recommend
-    },{
-      path: '/Home/directSeeding',
-      component: directSeeding
-    },{
-      path: '/Home/radio',
-      component: Radio
-    },{
-      path: '/Home/member',
-      component: member
-    }]
+  component: Home
 },{
   path: '/listen',
   component: Listen

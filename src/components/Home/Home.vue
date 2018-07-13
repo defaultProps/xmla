@@ -9,39 +9,47 @@
     <div class="icon-wrapper"><i class="icon-naozhong iconfont"></i></div>
     <div class="icon-wrapper"><i class="icon-xiazai iconfont"></i></div>
   </div>
-  <div class="router">
-    <div class="router-wrapper">
-       <router-link to="/Home/classify">分类</router-link>
-    </div>
-    <div class="router-wrapper">
-      <router-link to="/Home/recommend">推荐</router-link>
-    </div>
-    <div class="router-wrapper">
-      <router-link to="/Home/member">会员</router-link>
-    </div>
-    <div class="router-wrapper">
-      <router-link to="/Home/directSeeding">直播</router-link>
-    </div>
-    <div class="router-wrapper">
-      <router-link to="/Home/radio">广播</router-link>
+  <div class="nav">
+    <div class="nav-lists">
+      <div class="list" 2click="tab">分类</div>
+      <div class="list">推荐</div>
+      <div class="list">会员</div>
+      <div class="list">直播</div>
+      <div class="list">广播</div>
     </div>
   </div>
-  <keep-alive>
-    <router-view>
-    </router-view>
-  </keep-alive>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" data-hash="slide1">
+        <classify />
+      </div>
+      <div class="swiper-slide" data-hash="slide2">
+        推荐
+      </div>
+      <div class="swiper-slide" data-hash="slide3">
+        会员
+      </div>
+      <div class="swiper-slide" data-hash="slide4">
+        直播
+      </div>
+      <div class="swiper-slide" data-hash="slide5">
+        广播
+      </div>
+    </div>
+  </div>
 </div>
 </template>
 <script>
 import headerTop from '@/components/headerTop/headerTop'
-import { swiper, swiperSlide } from 'vue-awesome-swiper'
+import Swiper from 'swiper'
+import classify from '@/components/classify/classify'
 export default {
   components: {
-    swiper,
-    swiperSlide
+    classify
   },
   created() {
-    
+  },
+  methods: {
   }
 }
 
@@ -102,11 +110,12 @@ html,body
       outline 0
       padding 0 20px
       width 68vw
+      text-indent 5px
       font-size 14px
       font-weight 500
     i
       position absolute
-      top 5px
+      top 2px
       left 5px
       color #ccc
       font-size 16px
@@ -114,13 +123,13 @@ html,body
     i
       font-size 23px
       color #666
-.router
+.nav-lists
   flex(10px,39px, #f3f4f5)
   box-shadow -1px -1px 1px #d8d8d8
   border-bottom 1px solid #fff
-  .router-wrapper
-    a
+  .list
       color #333
-      font-size 16px
+      font-weight 520
+      font-size 17px
 
 </style>
