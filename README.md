@@ -1,21 +1,35 @@
-# xmla
+# 喜马拉雅APP使用文档
 
-> A Vue.js project
 
-## Build Setup
+### 页面结构
+#### 首要页面
+- 首页：典型的顶部、底部固定、中间内容区滚动、滑动、动态路由加载页面，
+- 我听：SPA页面基本结构：我的订阅、推荐订阅
+- 发现：SPA页面基本结构: 分类区和内容区swiper组件
+- 我的：基本页面
+#### 核心功能页面
+- 播放页面：详情、主播、评论、播放组件
+- 分类列表详情：由分类页面跳转，更多相关听书
+- 广告详情： 肯定最核心啦！！ 钱嘛，谁不喜欢？？
+#### 基本功能页面
+- 用户消息通知页面
+- 付费听书页面
+- 购买听书页面
+- 听书专辑页面
+- 直播页面：每天都有小姐姐，嘿嘿。。。兄弟，你渴望力量么？？  ---- 不，我渴望 naizhi！！
+#### 派生页面
+- 下载页面
+- 历史页面
+- 购买页面
+- 喜欢页面
+- 更多（直播、分类、详情、列表）页面
 
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+### 组件
+- 分类列表组件
+- swiper滑动组件
+- 听书flex组件x
+- 听书flex组件y
+- 换一批组件
+- 电台组件
+- 主播列表组件
+- 广播列表组件
