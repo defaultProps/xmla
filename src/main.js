@@ -8,6 +8,7 @@ import Listen from '@/components/listen/listen'
 import find from '@/components/find/find'
 import personal from '@/components/personal/personal'
 
+
 import classify from '@/components/classify/classify'
 import recommend from '@/components/recommend/recommend'
 import member from '@/components/member/member'
@@ -17,33 +18,58 @@ import Radio from '@/components/radio/radio'
 
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
-import VueAwesomeSwiper from 'vue-awesome-swiper'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 
 Vue.use(VueRouter);
-Vue.use(VueAwesomeSwiper);
 Vue.use(ElementUI);
-Vue.use(VueAxios,axios);
-
+Vue.use(VueAxios,axios)
 /* eslint-disable no-new */
 
-const routes = [{
-  path: '/',
-  component: Home
-},{
-  path: '/Home',
-  component: Home
-},{
-  path: '/listen',
-  component: Listen
-},{
-  path: '/find',
-  component: find
-},{
-  path: '/personal',
-  component: personal
-}]
+const routes = [
+  {
+    path: '/',
+    component: Home
+  },
+  {
+    path: '/Home',
+    component: Home,
+    children: [
+      {
+        path: '/Home/classify',
+        component: classify
+      },
+      {
+        path: '/Home/recommend',
+        component: recommend
+      },
+      {
+        path: '/Home/member',
+        component: member
+      },
+      {
+        path: '/Home/directSeeding',
+        component: directSeeding
+      },
+      {
+        path: '/Home/radio',
+        component: Radio
+      }
+    ]
+  },
+  {
+    path: '/listen',
+    component: Listen
+  },
+  {
+    path: '/find',
+    component: find
+  },
+  {
+    path: '/personal',
+    component: personal
+  }
+]
 const router = new VueRouter({
   linkActiveClass: 'active',
   routes
@@ -53,5 +79,8 @@ new Vue({
   components: { App },
   router,
   render: h => h(App),
-  template: '<App/>'
+  template: '<App/>',
+  data: {
+    eventBus: new Vue()   //  event 统一处理事件、数据
+  }
 })

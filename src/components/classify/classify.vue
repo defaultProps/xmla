@@ -31,34 +31,39 @@
       </div>
       <span class="title-lists">生活</span>
       <div class="table-wrapper">
-        <div class="list" v-for="(item, index) in classifyData.life">
+        <div class="list" v-for="(item, index) in classifyData.life" :key="index">
           <i class="iconfont" :style="{'color':item.color}" :class="item.icon"></i>
           <span>{{item.name}}</span>
         </div>
       </div>
       <span class="title-lists">特色</span>
       <div class="table-wrapper">
-        <div class="list" v-for="(item, index) in classifyData.feature">
+        <div class="list" v-for="(item, index) in classifyData.feature" :key="index">
           <i class="iconfont" :style="{'color':item.color}" :class="item.icon"></i>
           <span>{{item.name}}</span>
         </div>
       </div>
       <!-- 广告 -->
-      <div class="swiper-warpper">
-        <swiper class="swiper-ad">
-          <swiper-slide v-for="(url, index) in classifyData.AD" :key="index">
+      <div class="swiper-container-ad">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" v-for="(url, index) in classifyData.AD" :key="index">
             <img :src="url" style="width: 100%;height:100%">
-          </swiper-slide>
-        </swiper>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import tableList from '@/components/tableList/tableList';
-import BScroll from 'better-scroll';
+import tableList from '@/components/tableList/tableList'
+import BScroll from 'better-scroll'
+import Swiper from '../../../static/swiper'
+
 export default {
+  mounted() {
+
+  },
   data() {
     return {
      classifyData: {}
@@ -81,17 +86,26 @@ export default {
   methods: {
     init() {
       this.axios.get('https://www.easy-mock.com/mock/5b356985e58cad501f557b8c/xmla/xmla#!method=get').then((response)=>{
-        this.classifyData = response.data.data
-        console.log(this.classifyData);
+        this.classifyData = response.data.data;
+        this.initSwiper();
       }).catch((error)=>{
         console.log(error);
+      })
+    },
+    initSwiper() {
+      new Swiper('.swiper-container-ad',{
+        autoplay:1000,//每秒中轮播一次
+        loop:true,//可以让图片循环轮播
+        autoplayDisableOnInteraction:false,//在点击之后可以继续实现轮播
+        observer:true,//修改swiper自己或子元素时，自动初始化swiper
+        observeParents:true,//修改swiper的父元素时，自动初始化swiper
       })
     }
   }
 }
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 @import '../../common/stylus/mixin.styl';
 i
   color:#a392ec
@@ -110,61 +124,63 @@ i
   bottom 0
   background-color #f8f8f8
   overflow hidden
-  .recent-view-wrapper
-    height 46px
-    display flex
-    justify-content space-around
-    align-items center
-    span
-      color #333333
-      padding 2px 5px
-      text-align center
-      background-color #fff
-      border-radius 40px
-      width 19%
-      line-height 20px
-    .recent-view
-      color #999999
-      background-color #f8f8f8
+  .classify-content
+    width 100%
+    .recent-view-wrapper
+      height 46px
+      display flex
+      justify-content space-around
+      align-items center
+      span
+        color #333333
+        padding 2px 5px
+        text-align center
+        background-color #fff
+        border-radius 40px
+        width 19%
+        line-height 20px
+      .recent-view
+        color #999999
+        background-color #f8f8f8
 
-    
-  .lists
-    flex-lists(46px,#ffffff,6px)
-    .list
-      width 25%
-      text-align center
-      height 100%
-      border-right 1px solid #f8f8f8
-  .title-lists
-    height 46px
-    line-height 46px
-    margin-left 10px
-    color #666666
-    border-left 4px solid #f86442
-    padding-left 5px
-  .table-wrapper
-     flex-lists(46px,#ffffff,0)
-     flex-wrap wrap
-     .list
-        width 100px
-        text-align left
+      
+    .lists
+      flex-lists(46px,#ffffff,6px)
+      .list
+        width 25%
+        text-align center
         height 100%
         border-right 1px solid #f8f8f8
-        background-color #ffffff
-        width 33.3333333%
-        box-sizing border-box
-        border-bottom 1px solid #f8f8f8
-        .iconfont
-          margin-left 15px
-  .swiper-warpper
-    swiper(100%, 120px)
-    position relative
-    .swiper-ad
-      position absolute
-      top 0
-      right 0
-      bottom 0
-      left 0
-      height 120px
-      background-color #fff
+    .title-lists
+      height 46px
+      line-height 46px
+      margin-left 10px
+      color #666666
+      position relative
+      &:before
+        content ''
+        width 4px
+        height 13px
+        border-radius 5px
+        left -8px
+        top 4px
+        position absolute
+        background-color red
+    .table-wrapper
+      flex-lists(46px,#ffffff,0)
+      flex-wrap wrap
+      .list
+          width 100px
+          text-align left
+          height 100%
+          border-right 1px solid #f8f8f8
+          background-color #ffffff
+          width 33.3333333%
+          box-sizing border-box
+          border-bottom 1px solid #f8f8f8
+          .iconfont
+            margin-left 15px
+    .swiper-container-ad
+      width 100%
+      height 110px
 </style>
