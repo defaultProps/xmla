@@ -1,0 +1,287 @@
+{
+  "data": {
+    "headList": {
+      "first": [
+        {
+          "icon": "icon-book",
+          "name": "有声小说"
+        },
+        {
+          "icon": "",
+          "name": "言情"
+        },
+        {
+          "icon": "",
+          "name": "悬疑"
+        },
+        {
+          "icon": "",
+          "name": "都市"
+        }
+      ],
+      "second": [
+        {
+          "icon": "icon-book1",
+          "name": "畅销书"
+        },
+        {
+          "icon": "",
+          "name": "社科"
+        },
+        {
+          "icon": "",
+          "name": "经管"
+        },
+        {
+          "icon": "",
+          "name": "文学"
+        }
+      ],
+      "thrid": [
+        {
+          "icon": "icon-yingyuanxinxiertongpiao",
+          "name": "儿童"
+        },
+        {
+          "icon": "",
+          "name": "故事"
+        },
+        {
+          "icon": "",
+          "name": "卡通"
+        },
+        {
+          "icon": "",
+          "name": "儿科"
+        }
+      ]
+    },
+    "enjoy": [
+      {
+        "icon": "icon-yule1",
+        "name": "音乐",
+        "hot": false,
+        "color": "#f8d16c"
+      },
+      {
+        "icon": "icon-shanzi",
+        "name": "相声评书",
+        "hot": false,
+        "color": "#f8d16c"
+      },
+      {
+        "icon": "icon-book",
+        "name": "段子",
+        "hot": false,
+        "color": "#f8d16c"
+      },
+      {
+        "icon": "icon-qinggan",
+        "name": "情感生活",
+        "hot": false,
+        "color": "#f8d16c"
+      },
+      {
+        "icon": "icon-yule",
+        "name": "娱乐",
+        "hot": false,
+        "color": "#f8d16c"
+      },
+      {
+        "icon": "icon-jiaodai",
+        "name": "影视",
+        "hot": false,
+        "color": "#f8d16c"
+      },
+      {
+        "icon": "icon-toutiao",
+        "name": "头条",
+        "hot": false,
+        "color": "#f8d16c"
+      },
+      {
+        "icon": "icon-doudou",
+        "name": "二次元",
+        "hot": false,
+        "color": "#f8d16c"
+      },
+      {
+        "icon": "icon-svggeshi-",
+        "name": "世界杯",
+        "hot": true,
+        "color": "#f8d16c"
+      }
+    ],
+    "knowledge": [
+      {
+        "icon": "icon-lishihangcheng",
+        "name": "历史",
+        "hot": false,
+        "color": "#7cc2ef"
+      },
+      {
+        "icon": "icon-81",
+        "name": "商业财经",
+        "hot": false,
+        "color": "#7cc2ef"
+      },
+      {
+        "icon": "icon-maobi",
+        "name": "人文",
+        "hot": false,
+        "color": "#7cc2ef"
+      },
+      {
+        "icon": "icon-yingyu",
+        "name": "英语",
+        "hot": false,
+        "color": "#f8d16c"
+      },
+      {
+        "icon": "icon-icon",
+        "name": "教育培训",
+        "hot": false,
+        "color": "#7cc2ef"
+      },
+      {
+        "icon": "icon-keji",
+        "name": "IT科技",
+        "hot": false,
+        "color": "#7cc2ef"
+      },
+      {
+        "icon": "icon-icon1",
+        "name": "诗歌",
+        "hot": false,
+        "color": "#7cc2ef"
+      },
+      {
+        "icon": "",
+        "name": "国学书院",
+        "hot": false,
+        "color": "#7cc2ef"
+      },
+      {
+        "icon": "icon-52",
+        "name": "小语种",
+        "hot": false,
+        "color": "#7cc2ef"
+      }
+    ],
+    "life": [
+      {
+        "icon": "icon-lvyou",
+        "name": "旅游",
+        "hot": false,
+        "color": "#4dd298"
+      },
+      {
+        "icon": "icon-lvyou",
+        "name": "健康养生",
+        "hot": false,
+        "color": "#4dd298"
+      },
+      {
+        "icon": "icon-xiangshui",
+        "name": "时尚生活",
+        "hot": false,
+        "color": "#4dd298"
+      }
+    ],
+    "feature": [
+      {
+        "icon": "icon-jingpin",
+        "name": "付费精品",
+        "hot": false,
+        "color": "#fa927a"
+      },
+      {
+        "icon": "icon-diantai",
+        "name": "广播剧",
+        "hot": false,
+        "color": "#fa927a"
+      },
+      {
+        "icon": "icon-weibiaoti1",
+        "name": "粤语",
+        "hot": false,
+        "color": "#fa927a"
+      },
+      {
+        "icon": "icon-falv",
+        "name": "法律课堂",
+        "hot": false,
+        "color": "#fa927a"
+      },
+      {
+        "icon": "icon-zhibo",
+        "name": "电台",
+        "hot": false,
+        "color": "#fa927a"
+      },
+      {
+        "icon": "icon-icon",
+        "name": "党团课",
+        "hot": false,
+        "color": "#fa927a"
+      },
+      {
+        "icon": "icon-pinpaibiaozhibarand",
+        "name": "品牌之声",
+        "hot": false,
+        "color": "#fa927a"
+      },
+      {
+        "icon": "icon-3dcube",
+        "name": "3D体验馆",
+        "hot": false
+      },
+      {
+        "icon": "icon-icon",
+        "name": "名校公开课",
+        "hot": false,
+        "color": "#fa927a"
+      },
+      {
+        "icon": "icon-location",
+        "name": "听南昌",
+        "hot": false,
+        "color": "#fa927a"
+      },
+      {
+        "icon": "icon-zhibo",
+        "name": "直播",
+        "hot": false,
+        "color": "#fa927a"
+      },
+      {
+        "icon": "icon-qiche",
+        "name": "汽车",
+        "hot": false,
+        "color": "#fa927a"
+      },
+      {
+        "icon": "icon-huadian-yishubaijian",
+        "name": "艺术",
+        "hot": false,
+        "color": "#fa927a"
+      },
+      {
+        "icon": "icon-huapimianju1",
+        "name": "戏曲",
+        "hot": false,
+        "color": "#fa927a"
+      },
+      {
+        "icon": "",
+        "name": "",
+        "hot": "",
+        "color": ""
+      }
+    ],
+    "AD": [
+      "http://imagev2.xmcdn.com/group45/M03/9A/5C/wKgKlFs_WF7QnhfuAAD7ySl2Fvc695.jpg!op_type=5&upload_type=cover&device_type=ios&name=large_pop&strip=0&quality=7",
+      "http://imagev2.xmcdn.com/group45/M07/88/B3/wKgKjls-ynijGEvlAAeWnVEC2pU622.png!op_type=5&upload_type=album&device_type=ios&name=large_pop&strip=0&quality=7"
+    ]
+  }
+}
