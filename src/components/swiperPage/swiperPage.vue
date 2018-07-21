@@ -1,7 +1,7 @@
 <template>
   <div class="swiper-container swiperPage">
     <div class="swiper-wrapper">
-      <div class="swiper-slide" v-for="(item, index) in lists" :key="index">
+      <div class="swiper-slide" v-for="(item, index) in lists" :key="index" ref="swiperSlide">
         <keep-alive>
           <component :is="item.component"></component>
         </keep-alive>
@@ -17,6 +17,7 @@ import radio from '@/components/radio/radio'
 import directSeeding from '@/components/directSeeding/directSeeding'
 import member from '@/components/member/member' 
 import Swiper from '../../../static/swiper'
+import BScroll from '@/common/js/BScroll'
 export default {
   data() {
     return {
@@ -53,6 +54,7 @@ export default {
     this.$root.eventBus.$on('changeTab',index => {
       mySwiper.slideTo(index, 300, false)
     })
+    
   },
   methods: {
     slideTab (index) {
@@ -70,7 +72,7 @@ export default {
 @import '../../../static/swiper.css';
 .swiper-container
   position: absolute;
-  top: 86px;
+  top: 84px;
   left: 0;
   right: 0;
   bottom: 52px

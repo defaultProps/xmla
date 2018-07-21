@@ -29,7 +29,6 @@ export default {
   },
   mounted() {
     this.$nextTick( () => {
-      console.log(1);
       var mySwiper = new Swiper('.swiper-con',{
         loop:true,
         observer:true,//修改swiper自己或子元素时，自动初始化swiper 

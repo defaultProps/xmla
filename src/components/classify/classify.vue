@@ -57,13 +57,11 @@
 
 <script>
 import tableList from '@/components/tableList/tableList'
-import BScroll from 'better-scroll'
+import _BScroll from '@/common/js/BScroll'
 import Swiper from '../../../static/swiper'
+// import axois from '@/api/interface'
 
 export default {
-  mounted() {
-
-  },
   data() {
     return {
      classifyData: {}
@@ -74,19 +72,16 @@ export default {
   },
   created() {
     this.$nextTick(()=>{
-      let scroll = new BScroll(this.$refs.classify,{
-        scrollY: true,
-        click: true
-      })
-    })
+      _BScroll(this.$refs.classify);
+    });
     this.$nextTick(() => {
       this.init();
     })
   },
   methods: {
     init() {
-      this.axios.get('https://www.easy-mock.com/mock/5b356985e58cad501f557b8c/xmla/xmla#!method=get').then((response)=>{
-        this.classifyData = response.data.data;
+      this.$http.get('static/classify.json').then((response)=>{
+        this.classifyData = response.data
         this.initSwiper();
       }).catch((error)=>{
         console.log(error);

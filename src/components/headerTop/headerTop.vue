@@ -16,7 +16,7 @@ export default {
 }
 </script>
 
-<style lang="stylus" scroped>
+<style lang="stylus" scoped>
 
 @import '../../common/stylus/mixin.styl';
 

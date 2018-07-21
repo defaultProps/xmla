@@ -18,12 +18,10 @@ import Radio from '@/components/radio/radio'
 
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
-import axios from 'axios'
-import VueAxios from 'vue-axios'
+import axios from '@/api/interface.js'
 
 Vue.use(VueRouter);
 Vue.use(ElementUI);
-Vue.use(VueAxios,axios)
 /* eslint-disable no-new */
 
 const routes = [

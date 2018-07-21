@@ -9,6 +9,7 @@
 import headerTop from '@/components/headerTop/headerTop'
 import headerNav from '@/components/headerNav/headerNav'
 import swiperPage from '@/components/swiperPage/swiperPage'
+import fs from 'fs'
 export default {
   data() {
     return {
@@ -26,6 +27,7 @@ export default {
     }
   },
   mounted() {
+    
     const routeArr = ['/classify1', '/classify2', '/classify3', '/classify4'];
     let index = routeArr.findIndex( route => {
       return route === this.$route.path
