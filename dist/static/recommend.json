@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "confirm": true,
   "data": {
@@ -201,4 +202,209 @@
       }
     ]
   }
+=======
+{
+  "confirm": true,
+  "data": {
+    "swiperAD": [
+      "http://imagev2.xmcdn.com/group43/M01/BD/6F/wKgKjVsU6raQnOsiAAHAC6Ev0gw685.jpg!op_type=5&upload_type=album&device_type=ios&name=large_pop&strip=0&quality=7",
+      "http://imagev2.xmcdn.com/group44/M0A/FF/89/wKgKkVr5KaHCkvbmAAGh-SDORE4584.jpg!op_type=5&upload_type=cover&device_type=ios&name=large_pop&strip=0&quality=7",
+      "http://imagev2.xmcdn.com/group45/M03/9A/5C/wKgKlFs_WF7QnhfuAAD7ySl2Fvc695.jpg!op_type=5&upload_type=cover&device_type=ios&name=large_pop&strip=0&quality=7",
+      "http://imagev2.xmcdn.com/group43/M08/64/43/wKgKjVssrNLzNj5DAAKi8AVgbo4376.jpg!op_type=5&upload_type=album&device_type=ios&name=large_pop&strip=0&quality=7",
+      "http://imagev2.xmcdn.com/group22/M08/40/DB/wKgJLlszMA-A8ZESAAHq9JDaNEI554.jpg!op_type=5&upload_type=album&device_type=ios&name=large_pop&strip=0&quality=7",
+      "http://imagev2.xmcdn.com/group47/M07/13/C1/wKgKk1tIhKvRCVtQAAewdUxDZzA714.png!op_type=5&upload_type=album&device_type=ios&name=large_pop&strip=0&quality=7"
+    ],
+    "flexLists": [
+      {
+        "backgroundColor": "#ed9b9b",
+        "icon": "",
+        "name": "经典必听"
+      },
+      {
+        "backgroundColor": "#ff9494",
+        "icon": "",
+        "name": "每日必听"
+      },
+      {
+        "backgroundColor": "#85aff0",
+        "icon": "",
+        "name": "听头条"
+      },
+      {
+        "backgroundColor": "#bed497",
+        "icon": "",
+        "name": "听南昌"
+      },
+      {
+        "backgroundColor": "#e9df8f",
+        "icon": "",
+        "name": "VIP会员"
+      },
+      {
+        "backgroundColor": "#ff9494",
+        "icon": "",
+        "name": "每日必听"
+      },
+      {
+        "backgroundColor": "#85aff0",
+        "icon": "",
+        "name": "听头条"
+      },
+      {
+        "backgroundColor": "#bed497",
+        "icon": "",
+        "name": "听南昌"
+      },
+      {
+        "backgroundColor": "#e9df8f",
+        "icon": "",
+        "name": "VIP会员"
+      },
+      {
+        "backgroundColor": "#ff9494",
+        "icon": "",
+        "name": "每日必听"
+      },
+      {
+        "backgroundColor": "#85aff0",
+        "icon": "",
+        "name": "听头条"
+      },
+      {
+        "backgroundColor": "#bed497",
+        "icon": "",
+        "name": "听南昌"
+      },
+      {
+        "backgroundColor": "#e9df8f",
+        "icon": "",
+        "name": "VIP会员"
+      },
+      {
+        "backgroundColor": "#ff9494",
+        "icon": "",
+        "name": "每日必听"
+      },
+      {
+        "backgroundColor": "#85aff0",
+        "icon": "",
+        "name": "听头条"
+      },
+      {
+        "backgroundColor": "#bed497",
+        "icon": "",
+        "name": "听南昌"
+      },
+      {
+        "backgroundColor": "#e9df8f",
+        "icon": "",
+        "name": "VIP会员"
+      }
+    ],
+    "quickNews": [
+      "财经早报：中国上半年GDP同比增长6.8%",
+      "新闻直播间：小米手机充电自燃？ 官方回应结果出乎意料",
+      "为庆祝法国队胜利，华帝退全款启动",
+      "安妮·海瑟薇：从公主到女王，她被骂到差点引退？"
+    ],
+    "guessLike": [
+      {
+        "img": "",
+        "title": "虎啸·商业有味道",
+        "number": "4185.4万",
+        "type": 1,
+        "hascrown": false,
+        "titleIcon": ""
+      },
+      {
+        "img": "",
+        "title": "秘史趣谈",
+        "number": "1763.4万",
+        "type": 1,
+        "hascrown": false,
+        "titleIcon": ""
+      },
+      {
+        "img": "",
+        "title": "观复嘟嘟【文化】",
+        "number": "14.4亿",
+        "type": 1,
+        "hascrown": false,
+        "titleIcon": ""
+      },
+      {
+        "img": "",
+        "title": "上门阴夫（幽兰·云飞）",
+        "number": "4.9",
+        "type": 2,
+        "hascrown": true,
+        "titleIcon": ""
+      },
+      {
+        "img": "",
+        "title": "财经马红漫",
+        "number": "1684.4万",
+        "type": 1,
+        "hascrown": false,
+        "titleIcon": ""
+      },
+      {
+        "img": "",
+        "title": "超短波段王|每天一只短线好股",
+        "number": "4185.4万",
+        "type": 1,
+        "hascrown": false,
+        "titleIcon": ""
+      },
+      {
+        "img": "",
+        "title": "晓说2018",
+        "number": "4185.4万",
+        "type": 1,
+        "hascrown": false,
+        "titleIcon": ""
+      },
+      {
+        "img": "",
+        "title": "虎啸·商业有味道",
+        "number": "4185.4万",
+        "type": 1,
+        "hascrown": false,
+        "titleIcon": ""
+      },
+      {
+        "img": "",
+        "title": "男人禁地",
+        "number": "4185.4",
+        "type": 2,
+        "hascrown": true,
+        "titleIcon": ""
+      },
+      {
+        "img": "",
+        "title": "听秦说",
+        "number": "418万",
+        "type": 1,
+        "hascrown": false,
+        "titleIcon": ""
+      },
+      {
+        "img": "",
+        "title": "我是一个标题",
+        "number": "4185.4万",
+        "type": 1,
+        "hascrown": false,
+        "titleIcon": ""
+      },
+      {
+        "img": "",
+        "title": "虎啸·商业有味道",
+        "number": "4185.4万",
+        "type": 1,
+        "hascrown": false,
+        "titleIcon": ""
+      }
+    ]
+  }
+>>>>>>> 0ec5c7645475ad37477931eff620810e6efa661f
 }
