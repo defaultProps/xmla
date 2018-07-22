@@ -1,16 +1,17 @@
 <template>
   <div class="container">
     <div class="header">
-      <div class="title">猜你喜欢</div>
-      <div class="unusual">
-        <i class="iconfont icon-bazi" style="dispaly:block;float:left"></i>点我猜测更准
-      </div>
-      <div class="more">更多 <i class="iconfont icon-youjiantou" style="dispaly:block;float:right"></i></div>
+      <div class="title">{{listswrap.title}}</div>
+      <slot-list>
+        <slot name="guessLike"></slot>
+        <slot name="recommend"></slot>
+        <div class="more">更多<i class="iconfont icon-youjiantou" style="dispaly:block;float:right"></i></div>
+      </slot-list>
     </div>
     <div class="lists-wrapper">
       <div class="lists-container">
-        <div class="lists" v-for="(item, index) in guessLike" :key="index">
-          <image-wrap />
+        <div class="lists" v-for="(item, index) in listswrap.data" :key="index" v-if="index < maxLength">
+          <image-wrap :imageWrap="item"/>
         </div>
       </div>
       <update-list />
@@ -18,17 +19,26 @@
   </div>
 </template>
 <script>
+import slotList from '@/components/slotWrap/listSlot'
 import ImageWrap from '@/components/commonComponent/ImageWrap'
 import updateList from '@/components/commonComponent/updateList'
 export default {
   components: {
     'image-wrap': ImageWrap,
-    'update-list': updateList
+    'update-list': updateList,
+    'slot-list': slotList
   },
   props: {
-    guessLike: {
-      type: Array,
-      default: []
+    listswrap: {
+      type: Object,
+      default: {
+        "title": '',
+        "data": []
+      }
+    },
+    maxLength: {
+      type: Number,
+      default: 3
     }
   }
 }
@@ -46,14 +56,10 @@ export default {
     .title
       float left
       font-weight bold
-    .unusual
-      margin 0 10px
-      color #f86442
-      float left
-      font-size 0.9em 
     .more
       float right
       font-size 0.9em
+      color #666666
   .lists-wrapper
     padding 5px 0
     display block

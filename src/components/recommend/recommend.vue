@@ -1,12 +1,11 @@
 <template>
   <div class="recommend" ref="recommend">
     <div class="recommend-wrapper">
-      <div style="width:100%;overflow:hidden;background-color:#f8f8f8;"><swiper-ad :swiperAD="swiperAD"/></div>
+      <!-- <div style="width:100%;overflow:hidden;background-color:#f8f8f8;"><swiper-ad :swiperAD="swiperAD"/></div>
       <flex-lists :flexList1="flexList1" :flexList2="flexList2"/>
       <div class="quickNews">
         <div class="quickNews-container">
           <div class="quickNews-logo">
-            <!-- <img src="" /> 图片找不到合适的 -->
             快报
           </div>
           <div class="quickNews-swiper">
@@ -18,25 +17,36 @@
           </div>
           <div class="quick-more"></div>
         </div>
-      </div>
+      </div> -->
+      <!-- <cut-line />
+      <lists-wrap :listswrap="guessLike" :maxLength="6" />
       <cut-line />
-      <lists-wrap :guessLike="guessLike">
-        
-      </lists-wrap>
+      <lists-wrap :listswrap="recommend" :maxLength="3" />
       <cut-line />
-      <lists-wrap :guessLike="guessLike" />
+      <lists-down :listsdown="listsDown" />
+      <cut-line />
+      <lists-down :listsdown="history" />
+      <cut-line />
+      <recommend-ad :commendAD="commendAD"/>
+      <cut-line />
+      <lists-down :listsdown="listenList"/> -->
+      <cut-line />
+      <lazy-radio :lazyRadio="lazyRadio"/>
     </div>
   </div>
 </template>
 
 <script>
+import lazyRadio from '@/components/commonComponent/lazyRadio'
+import listsDown from '@/components/commonComponent/listsDown'
 import swiperAd from '@/components/swiperAD/swiperAD'
 import _BScroll from '@/common/js/BScroll'
 import Swiper from '../../../static/swiper'
 import flexLists from '@/components/flexLists/flexLists'
 import cutLine from '@/components/cutLine/cutLine'
 import listsWrap from '@/components/commonComponent/listsWrap'
-
+import recommendFreeVue from '../commonComponent/recommendFree.vue';
+import recommendAD from '@/components/commonComponent/recommendAd'
 export default {
   data() {
     return {
@@ -45,29 +55,26 @@ export default {
       flexList1: [],
       flexList2: [],
       quickNews: [],
-      guessLike: []
+      guessLike: {},
+      recommend: {},
+      listsDown: {},
+      commendAD: {},
+      history: {},
+      listenList: {},
+      lazyRadio: {}
     }
   },
-  created() {
 
-  },
   components: {
     'swiper-ad': swiperAd,
     'flex-lists': flexLists,
     'cut-line': cutLine,
-    'lists-wrap': listsWrap
+    'lists-wrap': listsWrap,
+    'lists-down': listsDown,
+    'recommend-ad': recommendAD,
+    'lazy-radio': lazyRadio
   },
-  mounted() {
-    this.$http.get('static/recommend.json').then(res => {
-      if(res.confirm) {
-        this.flexLists = res.data.flexLists
-        this.swiperAD = res.data.swiperAD
-        this.flexList1 = this.flexLists.slice(0,10)
-        this.flexList2 = this.flexLists.slice(11);
-        this.quickNews = res.data.quickNews;
-        this.guessLike = res.data.guessLike.slice(0,6);
-      }
-    });
+  created() {
     this.$nextTick( () => {
       _BScroll(this.$refs.recommend);
       new Swiper('.flex-container');
@@ -79,6 +86,24 @@ export default {
         observeParents:true,//修改swiper的父元素时，自动初始化swiper 
       });
     })
+  },
+  mounted() {
+    this.$http.get('static/recommend.json').then(res => {
+      if(res.confirm) {
+        this.flexLists = res.data.flexLists;
+        this.swiperAD = res.data.swiperAD;
+        this.flexList1 = this.flexLists.slice(0,10);
+        this.flexList2 = this.flexLists.slice(11);
+        this.quickNews = res.data.quickNews;
+        this.guessLike = res.data.guessLike;
+        this.recommend = res.data.recommend;
+        this.listsDown = res.data.listsdown;
+        this.history = res.data.history;
+        this.commendAD = res.data.commendAD;
+        this.listenList = res.data.listenList;
+        this.lazyRadio = res.data.lazyRadio;
+      }
+    });
   }
 }
 </script>

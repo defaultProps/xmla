@@ -12,7 +12,7 @@ export default {
 
 <style lang="stylus" scoped> 
 .update-list
-  margin 0 auto 10px auto
+  margin 10px auto 0 auto
   width 84.375px
   height 26px
   border-radius 26px

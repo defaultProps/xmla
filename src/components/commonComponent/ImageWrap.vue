@@ -1,27 +1,37 @@
 <template>
   <div class="image-wrapper">
-    <img class="image"/>
-    <div class="another">
+    <img class="image" :src="imageWrap.img"/>
+    <div class="another" v-show="imageWrap.hascrown">
       <i class="iconfont icon-jingpin"></i>
     </div>
     <div class="playback-wrapper">
       <div class="playback">
-        <i class="iconfont icon-bofang"></i>
-        2015万
+        <i class="iconfont " :class="imageWrap.type == 2 ? 'icon-xingxing':'icon-bofang'"></i>
+        {{imageWrap.number}}
       </div>
     </div>
     <div class="image-detail">
-      <div class="detail"> <span>会员免费</span>东华理工大学东华理工</div> 
-      <div class="detail-more">
-        东华理工大学东华理工  
+      <div class="detail"><recommendFree v-if="imageWrap.ismember"/>{{imageWrap.title}}</div> 
+      <div class="detail-more" v-if="imageWrap.detail">
+        {{imageWrap.detail}}
       </div>
     </div>
-    
   </div>
 </template>
 <script>
+
+import recommendFree from '@/components/commonComponent/recommendFree'
 export default {
-  
+  props: {
+    imageWrap: {
+      type: Object,
+      default: null
+    }
+  },
+  components: {
+    
+    'recommendFree': recommendFree
+  }
 }
 </script>
 <style lang="stylus" scoped>
@@ -33,23 +43,28 @@ export default {
     height 112px
     background-color #d9d9d9
   .image-detail
-    margin-top 5px
-    font-size 0.85em
     overflow hidden
     .detail
       width 100%
       color #333333
+      font-size 0.8rem
+      margin-top: 5px
       overflow hidden
       text-overflow ellipsis
       white-space nowrap
       display inline-block
-    span 
-      border-radius 3px
-      padding 0 1px
-      box-size border-box
-      color #ffffff
-      background-color #c37b2e
-      margin-right 3px 
+      span 
+        border-radius 3px
+        padding 0 2px
+        font-size 0.85em
+        box-size border-box
+        color #ffffff
+        background-color #c37b2e
+        margin-right 3px 
+    .detail-more
+      color #999999
+      margin-top -8px
+      font-size 0.8rem
   .another
     position absolute
     top 0
@@ -79,8 +94,8 @@ export default {
     .playback
       line-height 20px
       color #ffffff
-      font-size 10px
+      font-size 9px
       i
-        font-size 12px !important
+        font-size 10px !important
         color #ffffff
 </style>
