@@ -317,6 +317,7 @@
       ]
     },
     "listsdown": {
+      "showLength": 3,
       "title": "最热有声书",
       "list": ["言情","历史","都市","推理","QQ阅读"],
       "content": [
@@ -358,6 +359,7 @@
     ]
     },
     "history": {
+      "showLength": 3,
       "title": "历史",
       "list": ["中国史","名人传","百家讲坛","魏晋"],
       "content": [
@@ -412,6 +414,7 @@
     },
     "listenList": {
       "title": "精品听单",
+      "showLength": 4,
       "content": [
         {
           "img": "http://imagev2.xmcdn.com/group44/M08/07/FC/wKgKkVso4yiDs7AyAAs38jSawfs921.png!op_type=5&upload_type=album&device_type=ios&name=web_large&strip=0&quality=7",
@@ -449,44 +452,93 @@
     },
     "lazyRadio": {
       "title": "懒人电台",
+      "showLength": 3,
       "data": [
         {
-          "img": "",
+          "img": "http://imagev2.xmcdn.com/group44/M08/07/FC/wKgKkVso4yiDs7AyAAs38jSawfs921.png!op_type=5&upload_type=album&device_type=ios&name=web_large&strip=0&quality=7",
           "title": "一分钟笑翻你"
         },
         {
-          "img": "",
+          "img": "http://imagev2.xmcdn.com/group44/M08/07/FC/wKgKkVso4yiDs7AyAAs38jSawfs921.png!op_type=5&upload_type=album&device_type=ios&name=web_large&strip=0&quality=7",
           "title": "音乐随身听"
         },
         {
-          "img": "",
+          "img": "http://imagev2.xmcdn.com/group44/M08/07/FC/wKgKkVso4yiDs7AyAAs38jSawfs921.png!op_type=5&upload_type=album&device_type=ios&name=web_large&strip=0&quality=7",
           "title": "哄睡故事"
         },
         {
-          "img": "",
+          "img": "http://imagev2.xmcdn.com/group44/M08/07/FC/wKgKkVso4yiDs7AyAAs38jSawfs921.png!op_type=5&upload_type=album&device_type=ios&name=web_large&strip=0&quality=7",
           "title": "专注与助眠"
         },
         {
-          "img": "",
+          "img": "http://imagev2.xmcdn.com/group44/M08/07/FC/wKgKkVso4yiDs7AyAAs38jSawfs921.png!op_type=5&upload_type=album&device_type=ios&name=web_large&strip=0&quality=7",
           "title": "童话故事"
         },
         {
-          "img": "",
+          "img": "http://imagev2.xmcdn.com/group44/M08/07/FC/wKgKkVso4yiDs7AyAAs38jSawfs921.png!op_type=5&upload_type=album&device_type=ios&name=web_large&strip=0&quality=7",
           "title": "名家相声"
         },
         {
-          "img": "",
+          "img": "http://imagev2.xmcdn.com/group44/M08/07/FC/wKgKkVso4yiDs7AyAAs38jSawfs921.png!op_type=5&upload_type=album&device_type=ios&name=web_large&strip=0&quality=7",
           "title": "情感电台"
         },
         {
-          "img": "",
+          "img": "http://imagev2.xmcdn.com/group44/M08/07/FC/wKgKkVso4yiDs7AyAAs38jSawfs921.png!op_type=5&upload_type=album&device_type=ios&name=web_large&strip=0&quality=7",
           "title": "鬼故事"
         },
         {
-          "img": "",
+          "img": "http://imagev2.xmcdn.com/group44/M08/07/FC/wKgKkVso4yiDs7AyAAs38jSawfs921.png!op_type=5&upload_type=album&device_type=ios&name=web_large&strip=0&quality=7",
           "title": "开心一刻"
         }
       ]
+    },
+    "fyCommand": {
+      "title": "为你推荐",
+      "showLength": 8,
+      "content": [
+        {
+          "img": "http://imagev2.xmcdn.com/group44/M08/07/FC/wKgKkVso4yiDs7AyAAs38jSawfs921.png!op_type=5&upload_type=album&device_type=ios&name=web_large&strip=0&quality=7",
+          "title": "穿越火线：第一次世界大战",
+          "detail": "回到历史现场，像追美剧一样追历史故事",
+          "number": "557.6万",
+          "crown": "106"
+        },
+        {
+          "img": "http://imagev2.xmcdn.com/group44/M08/07/FC/wKgKkVso4yiDs7AyAAs38jSawfs921.png!op_type=5&upload_type=album&device_type=ios&name=web_large&strip=0&quality=7",
+          "title": "王立群史记之汉武帝",
+          "detail": "史家之绝唱，吴韵之离骚",
+          "number": "1731.9万",
+          "crown": "38"
+        },
+        {
+          "img": "http://imagev2.xmcdn.com/group44/M08/07/FC/wKgKkVso4yiDs7AyAAs38jSawfs921.png!op_type=5&upload_type=album&device_type=ios&name=web_large&strip=0&quality=7",
+          "title": "北大赵冬梅讲中国史",
+          "detail": "一门课带你了解历史的大脉络与小细节",
+          "number": "27.6万",
+          "crown": "17"
+        },
+        {
+          "img": "http://imagev2.xmcdn.com/group44/M08/07/FC/wKgKkVso4yiDs7AyAAs38jSawfs921.png!op_type=5&upload_type=album&device_type=ios&name=web_large&strip=0&quality=7",
+          "title": "如果‘非遗’会说话（明星版）",
+          "detail": "王凯、陈赫、马思纯等12等明星聊家乡遗产",
+          "number": "4487.3万",
+          "crown": "12"
+        },
+        {
+          "img": "http://imagev2.xmcdn.com/group44/M08/07/FC/wKgKkVso4yiDs7AyAAs38jSawfs921.png!op_type=5&upload_type=album&device_type=ios&name=web_large&strip=0&quality=7",
+          "title": "武则天",
+          "detail": "中国历史唯一女帝武则天的传奇一生",
+          "number": "296.7万",
+          "crown": "563"
+        },
+        {
+          "img": "http://imagev2.xmcdn.com/group44/M08/07/FC/wKgKkVso4yiDs7AyAAs38jSawfs921.png!op_type=5&upload_type=album&device_type=ios&name=web_large&strip=0&quality=7",
+          "title": "三国名将",
+          "detail": "吕布、诸葛亮、关羽、张飞、周瑜、吕蒙、三国演义",
+          "number": "992.7万",
+          "crown": "59"
+        }
+    ]
     }
   }
 }

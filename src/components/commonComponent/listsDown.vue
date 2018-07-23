@@ -2,13 +2,13 @@
   <div class="container">
     <div class="header">
       <div class="title">{{listsdown.title}}</div>
-      <div class="more">更多<i class="iconfont icon-youjiantou" style="dispaly:block;float:right"></i></div>
+      <div class="more" v-if="listsdown.title !== '为你推荐'">更多<i class="iconfont icon-youjiantou" style="dispaly:block;float:right"></i></div>
     </div>
     <div class="lists">
       <div class="classify-lists">
         <div class="classify-list" v-for="(item, index) in listsdown.list" :key="index">{{item}}</div>
       </div>
-      <div class="list" v-for="(item, index) in  listsdown.content" :key="index" v-if="index < 3">
+      <div class="list" v-for="(item, index) in  listsdown.content" :key="index" v-if="index < listsdown.showLength">
         <img :src="item.img" class="img"/>
         <div class="container-detail" >
           <div class="title">{{item.title}}</div>
@@ -19,7 +19,7 @@
               <span>{{item.number}}</span>
             </template>
             <i class="iconfont"></i>
-            <span>{{item.crown}}集</span>
+            <span>{{item.crown}}</span>
           </div>
         </div>
       </div>

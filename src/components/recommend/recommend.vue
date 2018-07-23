@@ -1,7 +1,7 @@
 <template>
   <div class="recommend" ref="recommend">
     <div class="recommend-wrapper">
-      <!-- <div style="width:100%;overflow:hidden;background-color:#f8f8f8;"><swiper-ad :swiperAD="swiperAD"/></div>
+      <div style="width:100%;overflow:hidden;background-color:#f8f8f8;"><swiper-ad :swiperAD="swiperAD"/></div>
       <flex-lists :flexList1="flexList1" :flexList2="flexList2"/>
       <div class="quickNews">
         <div class="quickNews-container">
@@ -17,8 +17,8 @@
           </div>
           <div class="quick-more"></div>
         </div>
-      </div> -->
-      <!-- <cut-line />
+      </div>
+      <cut-line />
       <lists-wrap :listswrap="guessLike" :maxLength="6" />
       <cut-line />
       <lists-wrap :listswrap="recommend" :maxLength="3" />
@@ -29,14 +29,18 @@
       <cut-line />
       <recommend-ad :commendAD="commendAD"/>
       <cut-line />
-      <lists-down :listsdown="listenList"/> -->
+      <lists-down :listsdown="listenList"/>
       <cut-line />
       <lazy-radio :lazyRadio="lazyRadio"/>
+      <cut-line />
+      <lists-down :listsdown="fyCommand"/>
+      <loading-foot />
     </div>
   </div>
 </template>
 
 <script>
+import loadingFoot from '@/components/commonComponent/loadingFoot'
 import lazyRadio from '@/components/commonComponent/lazyRadio'
 import listsDown from '@/components/commonComponent/listsDown'
 import swiperAd from '@/components/swiperAD/swiperAD'
@@ -61,10 +65,10 @@ export default {
       commendAD: {},
       history: {},
       listenList: {},
-      lazyRadio: {}
+      lazyRadio: {},
+      fyCommand: {}
     }
   },
-
   components: {
     'swiper-ad': swiperAd,
     'flex-lists': flexLists,
@@ -72,7 +76,8 @@ export default {
     'lists-wrap': listsWrap,
     'lists-down': listsDown,
     'recommend-ad': recommendAD,
-    'lazy-radio': lazyRadio
+    'lazy-radio': lazyRadio,
+    'loading-foot': loadingFoot
   },
   created() {
     this.$nextTick( () => {
@@ -102,6 +107,7 @@ export default {
         this.commendAD = res.data.commendAD;
         this.listenList = res.data.listenList;
         this.lazyRadio = res.data.lazyRadio;
+        this.fyCommand = res.data.fyCommand;
       }
     });
   }
