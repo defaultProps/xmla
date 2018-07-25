@@ -1,5 +1,5 @@
 <template>
-  <div>radio</div>
+  <div>rado</div>
 </template>
 
 <script>

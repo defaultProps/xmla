@@ -70,6 +70,7 @@ const routes = [
 ]
 const router = new VueRouter({
   linkActiveClass: 'active',
+  mode: 'history',
   routes
 })
 new Vue({

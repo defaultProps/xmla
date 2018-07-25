@@ -6,9 +6,9 @@
 </div>
 </template>
 <script>
-import headerTop from '@/components/headerTop/headerTop'
-import headerNav from '@/components/headerNav/headerNav'
-import swiperPage from '@/components/swiperPage/swiperPage'
+import headerTop from '@/components/commonComponent/headerTop'
+import headerNav from '@/components/commonComponent/headerNav'
+import swiperPage from '@/components/commonComponent/swiperPage'
 import fs from 'fs'
 export default {
   data() {

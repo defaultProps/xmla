@@ -5,21 +5,33 @@
       <i class="iconfont icon-jingpin"></i>
     </div>
     <div class="playback-wrapper">
-      <div class="playback">
+      <div class="playback" v-if="imageWrap.type">
         <i class="iconfont " :class="imageWrap.type == 2 ? 'icon-xingxing':'icon-bofang'"></i>
         {{imageWrap.number}}
       </div>
     </div>
-    <div class="image-detail">
-      <div class="detail"><recommendFree v-if="imageWrap.ismember"/>{{imageWrap.title}}</div> 
+    <div class="image-detail" v-if="!imageWrap.total">
+      <div class="detail">
+        <recommendFree v-if="imageWrap.ismember"/>
+        {{imageWrap.title}}
+      </div>
       <div class="detail-more" v-if="imageWrap.detail">
         {{imageWrap.detail}}
       </div>
     </div>
+    <div class="image-detail" v-else>
+      <div class="title">
+        {{imageWrap.title}}
+      </div>
+      <div class="total">
+        <span>{{imageWrap.total}}</span>喜点
+      </div>
+      <recommendFree v-if="imageWrap.ismember"/>
+    </div>
   </div>
 </template>
 <script>
-
+import vipHot from '@/components/commonComponent/vipHot'
 import recommendFree from '@/components/commonComponent/recommendFree'
 export default {
   props: {
@@ -60,7 +72,22 @@ export default {
         box-size border-box
         color #ffffff
         background-color #c37b2e
-        margin-right 3px 
+        margin-right 3px
+    .title
+      width 100%
+      color #333333
+      font-size 1rem
+      margin-top: 5px
+      overflow hidden
+      text-overflow ellipsis
+      white-space nowrap
+      display inline-block
+    .total
+      font-size .8em
+      span
+        font-size 1.1em
+        margin-right 2px 
+        color #fc5832
     .detail-more
       color #999999
       margin-top -8px

@@ -44,7 +44,7 @@ export default {
       display flex
       justify-content flex-start
       flex-wrap wrap
-      width 100%
+      width 100% 
       .list
         width 20%
         display flex
@@ -53,7 +53,7 @@ export default {
         .list-logo
           width 35px
           height 35px
-          border 1px solid #e3e4e5
+          background-color #f8f8f8
           border-radius 50%
           margin 0 auto
           img 

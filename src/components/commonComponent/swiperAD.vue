@@ -27,21 +27,21 @@ export default {
   created() {
 
   },
-  mounted() {
-    this.$nextTick( () => {
-      var mySwiper = new Swiper('.swiper-con',{
-        loop:true,
-        observer:true,//修改swiper自己或子元素时，自动初始化swiper 
-        observeParents:true,//修改swiper的父元素时，自动初始化swiper 
-      })
-      
+  updated() {
+    var mySwiper = new Swiper('.swiper-con', {
+      observer:true,//修改swiper自己或子元素时，自动初始化swiper 
+      observeParents:true,//修改swiper的父元素时，自动初始化swiper 
+      autoplay: true,
+      speed: 800,
+      loop: true,
+      autoplayDisableOnInteraction : false
     })
-    
   }
 }
 </script>
 <style lang="stylus" scroped>
 @import "../../common/stylus/mixin.styl";
 .swiper-con
-  swiper(100%, 160px)
+  width 375px
+  height 160px
 </style>

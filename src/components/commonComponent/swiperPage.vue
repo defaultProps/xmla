@@ -29,23 +29,23 @@ export default {
         component: recommend
       },{
         path: '/radio',
-        component: radio
+        component: member
       },{
         path: '/directSeeding',
         component: directSeeding
       },{
         path: '/member',
-        component: member
+        component: radio
       }],
-      currentIndex: 1
+      currentIndex: 2
     }
   },
   props: {
-
+    
   },
   mounted() {
     let mySwiper = new  Swiper('.swiper-container.swiperPage',{
-      initialSlide: 1
+      initialSlide: 2
     })
     mySwiper.on('slideChange', ()=> {     // 发送滑动事件 index
       this.currentIndex = mySwiper.activeIndex;

@@ -1,16 +1,16 @@
 <template>
   <div>
-    <slot name="gussLike">
+    <!-- <slot name="gussLike">
       <div class="unusual">
         <i class="iconfont icon-bazi" style="dispaly:block;float:left"></i>点我猜测更准
       </div>
-    </slot>
+    </slot> -->
     <slot></slot>
-    <slot name="recommend">
+    <!-- <slot name="recommend">
       <div class="recommend">
         <i class="iconfont icon-bazi" style="dispaly:block;float:left"></i>不一样的新概念 |
       </div>
-    </slot>
+    </slot> -->
     
   </div>
 </template>

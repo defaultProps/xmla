@@ -56,7 +56,7 @@
 </template>
 
 <script>
-import tableList from '@/components/tableList/tableList'
+import tableList from '@/components/commonComponent/tableList'
 import _BScroll from '@/common/js/BScroll'
 import Swiper from '../../../static/swiper'
 // import axois from '@/api/interface'

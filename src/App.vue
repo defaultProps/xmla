@@ -18,20 +18,20 @@
           </router-link>
         </div>
         <div class="list">
-          <router-link to="/listen">
+          <router-link to="/player">
            <div class="player">
              <img src="http://imagev2.xmcdn.com/group39/M06/01/19/wKgJnlphjGuwslJPAAGfGRV4Y-o110.jpg!op_type=5&upload_type=album&device_type=ios&name=web_large&strip=0&quality=7" alt="">
            </div>
           </router-link>
         </div>
         <div class="list">
-          <router-link to="/personal">
+          <router-link to="/find">
             <i class="iconfont icon-compass footer-icon"></i>
             <div class="footer-title">发现</div>
           </router-link>
         </div>
         <div class="list">
-          <router-link to="/find">
+          <router-link to="/personal">
           <i class="iconfont icon-geren footer-icon"></i>
           <div class="footer-title">未登录</div>
           </router-link>
@@ -102,11 +102,14 @@ export default {
           padding 10px
           box-sizing border-box
           position relative
+          z-index 9999
           img
             position absolute
+            z-index 9999
             top 5px
             left 5px
             width 50px
             height 50px
             border-radius 50%
+
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="recommend" ref="recommend">
     <div class="recommend-wrapper">
-      <div style="width:100%;overflow:hidden;background-color:#f8f8f8;"><swiper-ad :swiperAD="swiperAD"/></div>
+      <swiper-ad :swiperAD="swiperAD"/>
       <flex-lists :flexList1="flexList1" :flexList2="flexList2"/>
       <div class="quickNews">
         <div class="quickNews-container">
@@ -40,16 +40,18 @@
 </template>
 
 <script>
+const URL = "static/recommend.json";
+
 import loadingFoot from '@/components/commonComponent/loadingFoot'
 import lazyRadio from '@/components/commonComponent/lazyRadio'
 import listsDown from '@/components/commonComponent/listsDown'
-import swiperAd from '@/components/swiperAD/swiperAD'
+import swiperAd from '@/components/commonComponent/swiperAD'
 import _BScroll from '@/common/js/BScroll'
 import Swiper from '../../../static/swiper'
-import flexLists from '@/components/flexLists/flexLists'
-import cutLine from '@/components/cutLine/cutLine'
+import flexLists from '@/components/commonComponent/flexLists'
+import cutLine from '@/components/commonComponent/cutLine'
 import listsWrap from '@/components/commonComponent/listsWrap'
-import recommendFreeVue from '../commonComponent/recommendFree.vue';
+import recommendFreeVue from '@/components/commonComponent/recommendFree.vue';
 import recommendAD from '@/components/commonComponent/recommendAd'
 export default {
   data() {
@@ -82,18 +84,10 @@ export default {
   created() {
     this.$nextTick( () => {
       _BScroll(this.$refs.recommend);
-      new Swiper('.flex-container');
-      new Swiper('.quickNews-swiper',{
-        loop: true,
-        direction : 'vertical',
-        autoplay: true,
-        observer:true,//修改swiper自己或子元素时，自动初始化swiper 
-        observeParents:true,//修改swiper的父元素时，自动初始化swiper 
-      });
     })
   },
   mounted() {
-    this.$http.get('static/recommend.json').then(res => {
+    this.$http.get(URL).then(res => {
       if(res.confirm) {
         this.flexLists = res.data.flexLists;
         this.swiperAD = res.data.swiperAD;
@@ -109,6 +103,18 @@ export default {
         this.lazyRadio = res.data.lazyRadio;
         this.fyCommand = res.data.fyCommand;
       }
+    });
+  },
+  updated() {
+    new Swiper('.flex-container');
+    new Swiper('.quickNews-swiper',{
+      direction : 'vertical',
+      observer:true,//修改swiper自己或子元素时，自动初始化swiper 
+      observeParents:true,//修改swiper的父元素时，自动初始化swiper 
+      autoplay: true,
+      speed: 700,
+      loop: true,
+      autoplayDisableOnInteraction : false,
     });
   }
 }

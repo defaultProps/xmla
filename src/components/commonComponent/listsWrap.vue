@@ -3,8 +3,8 @@
     <div class="header">
       <div class="title">{{listswrap.title}}</div>
       <slot-list>
-        <slot name="guessLike"></slot>
-        <slot name="recommend"></slot>
+        <!-- <slot name="guessLike"></slot>
+        <slot name="recommend"></slot> -->
         <div class="more">更多<i class="iconfont icon-youjiantou" style="dispaly:block;float:right"></i></div>
       </slot-list>
     </div>
@@ -14,7 +14,7 @@
           <image-wrap :imageWrap="item"/>
         </div>
       </div>
-      <update-list />
+      <update-list v-if="!listswrap.noupdate"/>
     </div>
   </div>
 </template>

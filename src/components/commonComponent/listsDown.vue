@@ -22,10 +22,9 @@
             <span>{{item.crown}}</span>
           </div>
         </div>
-      </div>
-      
+      </div> 
     </div>
-    <update-list />
+    <update-list v-if="listsdown.noupdate == true"/>
   </div>
 </template>
 <script>
