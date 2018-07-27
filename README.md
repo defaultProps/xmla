@@ -5,7 +5,8 @@
 - 运行： npm run dev
 
 ``` 
-如果遇到任何问题，请私信[segmentfault](https://segmentfault.com/u/spike_5aae27dfc9a8f)、[掘金](https://juejin.im/user/5ae120906fb9a07abd0d578a)
+如果遇到任何问题，请私信[segmentfault](https://segmentfault.com/u/spike_5aae27dfc9a8f) 、   
+[掘金](https://juejin.im/user/5ae120906fb9a07abd0d578a)
 如果是妹纸：加个QQ:1748416084
 
 ```
